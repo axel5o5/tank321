@@ -5,11 +5,19 @@ not predictive intervals or uncertainty over market inputs, schedules or rules.
 """
 import numpy as np
 import pandas as pd
+import argparse
+from pathlib import Path
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--input-dir", type=Path, default=Path("results"))
+parser.add_argument("--output-dir", type=Path, default=Path("outputs"))
+args = parser.parse_args()
+args.output_dir.mkdir(parents=True, exist_ok=True)
 
 rows, contrasts = [], []
 for source in ('betmgm', 'kalshi'):
-    states = pd.read_csv(f'results/proj_2026_27_{source}_states.csv')
-    summary = pd.read_csv(f'results/proj_2026_27_{source}.csv', index_col='team')
+    states = pd.read_csv(args.input_dir / f'proj_2026_27_{source}_states.csv')
+    summary = pd.read_csv(args.input_dir / f'proj_2026_27_{source}.csv', index_col='team')
     assert len(states) == 4500 and states.state.nunique() == 150
     assert not states.duplicated(['team', 'state']).any()
     means = states.groupby('team').dV_new.mean()
@@ -24,6 +32,6 @@ for source in ('betmgm', 'kalshi'):
         contrasts.append({'source': source, 'team_a': a, 'team_b': b,
                           'mean_difference': difference.mean(),
                           'conditional_paired_mcse': difference.sem()})
-pd.DataFrame(rows).to_csv('results/conditional_state_mcse.csv', index=False)
-pd.DataFrame(contrasts).to_csv('results/conditional_rank_mcse.csv', index=False)
+pd.DataFrame(rows).to_csv(args.output_dir / 'conditional_state_mcse.csv', index=False)
+pd.DataFrame(contrasts).to_csv(args.output_dir / 'conditional_rank_mcse.csv', index=False)
 print('Saved conditional Monte Carlo error only; no real-world predictive intervals.')

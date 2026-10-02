@@ -5,9 +5,12 @@ incentive to lose at the break, adjusted for pick ownership, and compare it with
 did after the break relative to a projection from its pre-break results. The same break states are then
 re-scored under the 3-2-1 rules.
 
-usage: python3 replay.py            (all three seasons, three value curves)
+usage: python3 replay.py --value-cache results/pick_values.csv --output-dir outputs
+       (all three seasons, three value curves; expensive)
+Without --value-cache, raw source data (not deposited here) is required.
 """
 import sys
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -62,18 +65,22 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("windows", nargs="*", metavar="{ws4,ws_car,star}")
     parser.add_argument("--value-cache", help="Explicit deposited pick-value CSV; otherwise rebuild from raw inputs")
+    parser.add_argument("--output-dir", type=Path, default=Path("outputs"))
     args = parser.parse_args()
     if any(w not in ("ws4", "ws_car", "star") for w in args.windows):
         parser.error("windows must be ws4, ws_car or star")
     pd.set_option("display.width", 220)
     windows = args.windows or ["ws4", "ws_car", "star"]
     for w in windows:
+        value_vector(w, cache_path=args.value_cache)
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    for w in windows:
         frames = []
         for y in SEASONS:
             df = replay(y, window=w, value_cache=args.value_cache)
             frames.append(df)
         allr = pd.concat(frames)
-        allr.to_csv(f"results/replay_{w}.csv")
+        allr.to_csv(args.output_dir / f"replay_{w}.csv")
         print(f"\n=== {w}")
         cols = ["season", "W0", "pre_G", "P_playoff", "P_rel", "dV_old", "dV_new", "dPlayoff", "post_winpct",
                 "post_shortfall", "owns_pick"]

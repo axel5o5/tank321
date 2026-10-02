@@ -16,3 +16,7 @@ Validation date: October 1, 2026 (America/New_York). This records the bounded ca
 - All 17 runtime package versions in `requirements-release.lock` match the tested interpreter. The lock's wheel hashes were preserved, but package installation and wheel-hash verification were not repeated in this candidate check. The lock targets CPython 3.13/macOS arm64.
 
 Not rerun during packaging: full 40,000-simulation historical replays, full 150/100-state forward runs, raw player/game reconstruction, independent market quote retrieval or an upstream legal audit. The selected obligations remain a scoped model rather than a complete portfolio. The coordinator independently repeated the isolated checks and reviewed the explicit public file set; repository visibility and file integrity are checked after publication separately.
+
+## Current cleanup checks (October 2, 2026)
+
+The record above is historical and unchanged. See [the current cleanup scope and validation boundary](docs/CLEANUP.md) and [reproduction instructions](docs/REPRODUCTION.md). A fresh Python 3.13.7 macOS arm64 environment passed hashed wheel installation, `pip check`, 22 science/reproduction tests, 14 integrity-checker tests, and deposited-artifact reproduction. Five generated text/CSV artifacts matched the deposit byte-for-byte; figures were generated without a new visual-equivalence claim. Snapshot integrity passed before and after reproduction, and all deposited scientific artifacts remain unchanged. No expensive simulations or hosted CI run have been performed for this cleanup.

@@ -1,0 +1,38 @@
+name: Release checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-checks:
+    # Standard arm64 runner; do not substitute an Intel or Linux lock install.
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.7'
+          architecture: arm64
+      - name: Confirm locked runtime platform
+        run: |
+          python -I -B -c "import platform, sys; assert platform.system() == 'Darwin'; assert platform.machine() == 'arm64'; assert sys.version_info[:3] == (3, 13, 7); print(sys.version, platform.platform())"
+      - name: Test integrity checker
+        run: python -I -B -m unittest discover -s tests/integrity -v
+      - name: Verify release snapshot
+        run: python -I -B tools/check_integrity.py
+      - name: Install hashed runtime wheels
+        run: |
+          python -I -m pip install --require-hashes --only-binary=:all: --force-reinstall -r requirements-release.lock
+          python -I -m pip check
+      - name: Offline deposited-input checks
+        run: python -I -B run_checks.py
+      - name: Verify checks left the snapshot intact
+        run: python -I -B tools/check_integrity.py

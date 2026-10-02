@@ -7,6 +7,7 @@ break measure every team's marginal incentive to lose under the 3-2-1 lottery an
 under the old lottery. Pick ownership follows reported 2027 obligations.
 """
 from __future__ import annotations
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -115,16 +116,19 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--value-cache", help="Explicit archived pick-value CSV; otherwise rebuild from raw data")
+    parser.add_argument("--output-dir", type=Path, default=Path("outputs"))
     args = parser.parse_args()
+    value_vector(cache_path=args.value_cache)
+    args.output_dir.mkdir(parents=True, exist_ok=True)
     pd.set_option("display.width", 200)
     for src in ["betmgm", "kalshi"]:
         summ, allst = project(source=src, value_cache=args.value_cache, progress=True)
-        summ.to_csv(f"results/proj_2026_27_{src}.csv")
-        allst.to_csv(f"results/proj_2026_27_{src}_states.csv")
+        summ.to_csv(args.output_dir / f"proj_2026_27_{src}.csv")
+        allst.to_csv(args.output_dir / f"proj_2026_27_{src}_states.csv")
         print(f"\n=== 2026-27 projection, {src} win totals (incentive at a simulated All-Star break)")
         print(summ.round(3).to_string())
     # rule effect only: every team owns its pick
     summ, _ = project(source="betmgm", ownership={}, K=100, value_cache=args.value_cache, progress=True)
-    summ.to_csv("results/proj_2026_27_betmgm_ownall.csv")
+    summ.to_csv(args.output_dir / "proj_2026_27_betmgm_ownall.csv")
     print("\n=== same, every team owning its own pick")
     print(summ.round(3).to_string())

@@ -1,7 +1,13 @@
 {
   "candidate_source_edits": {
     "abstract.md": "Coordinator panel-informed editorial revision and real public repository URL; no numerical model change.",
-    "requirements-release.txt": "Comment-only: replace private-manifest attribution with tested Python-version description. No dependency or scientific changes."
+    "figure1.py": "Public cleanup: explicit input/output directories and safe generated-output default; plotting calculations unchanged.",
+    "headline.py": "Public cleanup: explicit input/output directories and safe generated-output default; calculations unchanged.",
+    "project_2026_27.py": "Public cleanup: output-directory CLI plumbing; simulation settings and calculations unchanged.",
+    "replay.py": "Public cleanup: output-directory CLI plumbing and corrected deposited-input usage; simulation settings and calculations unchanged.",
+    "requirements-release.txt": "Comment-only: replace private-manifest attribution with tested Python-version description. No dependency or scientific changes.",
+    "table1.py": "Public cleanup: explicit input/output directories and safe generated-output default; calculations unchanged.",
+    "value.py": "Public cleanup: actionable missing raw-input diagnostics; value calculations unchanged."
   },
   "excluded": [
     "repository history",
@@ -20,11 +26,17 @@
       "provenance": "binary and generated-artifact classification",
       "sha256": "bc0a90feccd80b72dfaac141702e2b06bbb4ef3ce8f5f9d5d08ce8123262e45f"
     },
+    ".github/workflows/checks.yml": {
+      "bytes": 1330,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "public cleanup: bounded checks and integrity CI configuration",
+      "sha256": "7137dd67c122adfd6e3990565ed27ab88f42c7d3851dc79da33141e9f4e59fa3"
+    },
     ".gitignore": {
-      "bytes": 91,
+      "bytes": 133,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "release-owner safety exclusions",
-      "sha256": "df76ad07be598ae64f5e1af8d5460a520b8bb2aec4031bb3270eb29274b099d1"
+      "sha256": "c16185276386fe6e21039ae2bfd76f12744079098e90b987be59ba04f4fe8645"
     },
     "DATA_NOTICE.md": {
       "bytes": 1642,
@@ -49,16 +61,16 @@
       "unchanged_from_source": true
     },
     "README.md": {
-      "bytes": 6988,
+      "bytes": 3776,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "new release documentation/check tooling",
-      "sha256": "154927988bf775742222324253c5a49189dd18b0872bcb3688a9c7e730f84a82"
+      "sha256": "9ff00a375b7b3ba5891473cd2a8335d54e6c920751ae3e126e1bc06c4d658721"
     },
     "VALIDATION.md": {
-      "bytes": 3179,
+      "bytes": 3914,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "new release documentation/check tooling",
-      "sha256": "8686a20c771cbb4eafd00074b5449fed9e835e8ec58b60f3f7134b747caa5186"
+      "sha256": "3b986e4f1dc3ae590885ca2a134f0789fb6ce326bd41805e3eb66003b1bc3c90"
     },
     "abstract.md": {
       "bytes": 3263,
@@ -106,21 +118,39 @@
       "provenance": "exact numeric export of project_2026_27.WIN_TOTALS; dates from its recorded attribution",
       "sha256": "dc9d9e47b2d0c0eb2fdc7c7e4a2bba17fdb406f8929865e2ff3e6fd6bba42290"
     },
+    "docs/CLEANUP.md": {
+      "bytes": 2330,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "public cleanup: scope and bounded validation record",
+      "sha256": "a604b6586bbff2e6fec71817062b89fa92f3ef31a61e2f496b48110a7db54c53"
+    },
+    "docs/METHODS.md": {
+      "bytes": 6340,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "public cleanup: methods and interpretation limits extracted from existing research documentation",
+      "sha256": "5d65b3b4049f5a289cd9545130c84014d431d918fcecd748ff3850b46b7ea479"
+    },
+    "docs/REPRODUCTION.md": {
+      "bytes": 6191,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "public cleanup: deposited-input reproduction instructions and environment boundaries",
+      "sha256": "cc67a188b1afdbc1f5e97dcacfe0368738b661dba3ac0b2a17be5a7c3c9ec4de"
+    },
     "figure1.py": {
-      "bytes": 4958,
+      "bytes": 5319,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "authoritative source snapshot, relative path figure1.py",
-      "sha256": "976077c1a9adcf9ed28505f28e2c44bf54dc2a4289dd5e6b400bcb150e880f0e",
+      "sha256": "327d00cd30d9d3470ae70a1b3cc9b0d5081edc5c481779087af50c552ee85088",
       "source_sha256": "976077c1a9adcf9ed28505f28e2c44bf54dc2a4289dd5e6b400bcb150e880f0e",
-      "unchanged_from_source": true
+      "unchanged_from_source": false
     },
     "headline.py": {
-      "bytes": 5149,
+      "bytes": 5390,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "authoritative source snapshot, relative path headline.py",
-      "sha256": "aabc1e53db5332d9d0a81c080e1f660109f5e172355e7df8a3c34e0826627466",
+      "sha256": "23373057304c22a1c6ca6c7c965da876c13f72fe107b2904e7be56b74924095b",
       "source_sha256": "aabc1e53db5332d9d0a81c080e1f660109f5e172355e7df8a3c34e0826627466",
-      "unchanged_from_source": true
+      "unchanged_from_source": false
     },
     "lottery.py": {
       "bytes": 5393,
@@ -131,10 +161,10 @@
       "unchanged_from_source": true
     },
     "mc_uncertainty.py": {
-      "bytes": 1619,
+      "bytes": 1974,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "new release documentation/check tooling",
-      "sha256": "83f8839bda1a423eb627c0a2c330cbde3e20a9b882b76f965a8beaaa63bf94bb"
+      "sha256": "020f63f7190bb30fab9d0dd89c08cc90487cf11791599d7eecee53e052e17cf7"
     },
     "ownership.py": {
       "bytes": 4113,
@@ -145,20 +175,20 @@
       "unchanged_from_source": true
     },
     "project_2026_27.py": {
-      "bytes": 6494,
+      "bytes": 6726,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "authoritative source snapshot, relative path project_2026_27.py",
-      "sha256": "4895a8f18b0860b40ae5bf351a260fbd53b20796df53c1a589e05bddc7b52338",
+      "sha256": "ba872f92acda3f26d2768e178a5016e304c219804208d993adab3f652dfd33f6",
       "source_sha256": "4895a8f18b0860b40ae5bf351a260fbd53b20796df53c1a589e05bddc7b52338",
-      "unchanged_from_source": true
+      "unchanged_from_source": false
     },
     "replay.py": {
-      "bytes": 3543,
+      "bytes": 3923,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "authoritative source snapshot, relative path replay.py",
-      "sha256": "e782dc43aa25731c8024817264ffc198616d74f3b57c49270908d230fad2daa8",
+      "sha256": "6e05bad302bfef243f330ece346932e670fcf47ffcf922cab3b8aa3f43d004b9",
       "source_sha256": "e782dc43aa25731c8024817264ffc198616d74f3b57c49270908d230fad2daa8",
-      "unchanged_from_source": true
+      "unchanged_from_source": false
     },
     "reporting.py": {
       "bytes": 444,
@@ -167,6 +197,12 @@
       "sha256": "82e73bf0129b5d364754d8b49fda26fa113e4049d8c8ec8c588c757352137cc8",
       "source_sha256": "82e73bf0129b5d364754d8b49fda26fa113e4049d8c8ec8c588c757352137cc8",
       "unchanged_from_source": true
+    },
+    "reproduce.py": {
+      "bytes": 4538,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "public cleanup: deposited-input reproduction wrapper with protected published results and explicit full-simulation opt-in",
+      "sha256": "ac1a0d413cfb4a68cd30a8446d1c758cc082ad0fb63c59a6a712856c0f2bd0e1"
     },
     "requirements-release.lock": {
       "bytes": 1794,
@@ -317,10 +353,10 @@
       "unchanged_from_source": true
     },
     "run_checks.py": {
-      "bytes": 2682,
+      "bytes": 2702,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "new release documentation/check tooling",
-      "sha256": "bf4b6d0565f1a2d8fef1ce2d900f82bb4a2a6866240047823399df195ebbbc46"
+      "sha256": "de631d8d48bedff7613334a04bc7503cfcb8a88740dc8bfd1082bd4c913da877"
     },
     "sim.py": {
       "bytes": 16465,
@@ -337,18 +373,30 @@
       "sha256": "68a4d7e6552fc56ac8da164d59d6f74ae92fdf7ef800d0ee13dd8d6a34814628"
     },
     "table1.py": {
-      "bytes": 1184,
+      "bytes": 1535,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "authoritative source snapshot, relative path table1.py",
-      "sha256": "c7244b1235524eba90dc1477a09fc1751347bb43fb92e02098636ea40f5f343e",
+      "sha256": "b83109688fd2049963dd6d0ace143378f75fa0210e5e1f647302a8c1cfdd6476",
       "source_sha256": "c7244b1235524eba90dc1477a09fc1751347bb43fb92e02098636ea40f5f343e",
-      "unchanged_from_source": true
+      "unchanged_from_source": false
     },
     "tests/deposited/test_inputs.py": {
       "bytes": 7976,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "new release documentation/check tooling",
       "sha256": "ac0ee94027ce1be517ec2590533d9a6e795240141bdd24489dac0f26b02335b5"
+    },
+    "tests/deposited/test_reproduction.py": {
+      "bytes": 7677,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "public cleanup: reproduction safety and raw-input diagnostic tests",
+      "sha256": "37b5c71df1052cc2b22d1de296c8fe5587ec491dcb34bdac48a1c6cc340c00a3"
+    },
+    "tests/integrity/test_integrity.py": {
+      "bytes": 6463,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "public cleanup: integrity-checker regression tests",
+      "sha256": "95172771364980b465d58861686b0da0d0a12019e849486f120035b225b722d6"
     },
     "tests/release/test_synthetic_science.py": {
       "bytes": 5817,
@@ -358,13 +406,19 @@
       "source_sha256": "5f9b73a2b8c2c48873e74dd124c7f95b7d31009b934c0a377bb8d14e6d572183",
       "unchanged_from_source": true
     },
+    "tools/check_integrity.py": {
+      "bytes": 5613,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "public cleanup: standard-library payload inventory and byte-integrity checker",
+      "sha256": "fc860a0b55142fa6eb57b25c7ddfa5a396920f26941cf7f257a4af46d2ac095e"
+    },
     "value.py": {
-      "bytes": 4054,
+      "bytes": 4692,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "authoritative source snapshot, relative path value.py",
-      "sha256": "404dcc46c74abacafd7e486def616c8cf66390acb6e490fd6fbf1cf5e7cf834c",
+      "sha256": "67772f51df89888d9b62ff896caba4fb97bbfe411c1efc169c718991d111ef5c",
       "source_sha256": "404dcc46c74abacafd7e486def616c8cf66390acb6e490fd6fbf1cf5e7cf834c",
-      "unchanged_from_source": true
+      "unchanged_from_source": false
     }
   },
   "hash_contract": "This manifest hashes all payload files; SHA256SUMS additionally hashes this manifest and excludes only itself.",
