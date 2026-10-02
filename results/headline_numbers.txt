@@ -1,0 +1,21 @@
+LOTTERY 3-2-1 group odds (No.1/top3/top5/top10) and expected pick: rel 5.4/16.5/28.0/60.6 E=8.09; np3 8.1/23.9/39.2/73.4 E=7.45; pi910 5.4/16.5/28.0/58.6 E=9.07; pi78 2.7/8.5/14.9/35.0 E=11.65
+LOTTERY relegated P(pick 10/11/12) = 8.1/14.4/25.1; P(13+) = 0.00
+LOTTERY old system expected pick: worst 3.67, 4th worst 4.44
+VALUE ws4: V(1)=22.3, V(5)=14.2, V(10)=10.8, V(14)=8.1, V(30)=5.2
+VALIDATION[ws4]: out-of-contention team-seasons n=32; Spearman rho(incentive, post-break wins below projection) = 0.42 (p=0.015); top half by incentive 2.2 wins below projection vs bottom half 0.4; per season 2023-24 0.30, 2024-25 0.29, 2025-26 0.58; corr(incentive, pre-break win%) 0.54; partial rho given win% 0.32 (p=0.081)
+VALIDATION[ws_car]: out-of-contention team-seasons n=32; Spearman rho(incentive, post-break wins below projection) = 0.35 (p=0.049); top half by incentive 1.9 wins below projection vs bottom half 0.8; per season 2023-24 0.10, 2024-25 0.24, 2025-26 0.58; corr(incentive, pre-break win%) 0.43; partial rho given win% 0.25 (p=0.171)
+VALIDATION[star]: out-of-contention team-seasons n=32; Spearman rho(incentive, post-break wins below projection) = 0.37 (p=0.039); top half by incentive 2.2 wins below projection vs bottom half 0.4; per season 2023-24 0.21, 2024-25 0.18, 2025-26 0.48; corr(incentive, pre-break win%) 0.43; partial rho given win% 0.27 (p=0.141)
+REPLAY[ws4, 2025-26]: out of contention n=9 mean incentive old 0.283 -> 3-2-1 -0.064 (-123%); above 0.01: 9 -> 2; bubble n=5 (ATL, CHA, MIA, GSW, POR) 0.315 -> 0.381 (+21%)
+REPLAY[ws4, 2025-26]: bubble break-even playoff value (median incentive / playoff-odds cost per game) old 3.0 -> 3-2-1 5.4 Win Shares; cost per game 0.075
+REPLAY[ws4, 3 seasons]: out of contention n=29 mean incentive old 0.298 -> 3-2-1 -0.003 (-101%); above 0.01: 29 -> 13; bubble n=18 (CHI, IND, MIA, DAL, GSW, LAL, PHX, SAC, MIA, ORL, DAL, GSW, SAC, ATL, CHA, MIA, GSW, POR) 0.353 -> 0.534 (+51%)
+REPLAY[ws4, 3 seasons]: bubble break-even playoff value (median incentive / playoff-odds cost per game) old 3.0 -> 3-2-1 5.9 Win Shares; cost per game 0.072
+REPLAY[ws_car, 2025-26]: out of contention n=9 mean incentive old 1.227 -> 3-2-1 -0.241 (-120%); above 0.01: 9 -> 3; bubble n=5 (ATL, CHA, MIA, GSW, POR) 1.170 -> 1.535 (+31%)
+REPLAY[ws_car, 3 seasons]: out of contention n=29 mean incentive old 1.258 -> 3-2-1 -0.027 (-102%); above 0.01: 29 -> 14; bubble n=18 (CHI, IND, MIA, DAL, GSW, LAL, PHX, SAC, MIA, ORL, DAL, GSW, SAC, ATL, CHA, MIA, GSW, POR) 1.288 -> 2.039 (+58%)
+REPLAY[star, 2025-26]: out of contention n=9 mean incentive old 0.008 -> 3-2-1 -0.001 (-118%); above 0.0005: 9 -> 2; bubble n=4 (CHA, MIA, GSW, POR) 0.010 -> 0.013 (+25%)
+REPLAY[star, 3 seasons]: out of contention n=29 mean incentive old 0.008 -> 3-2-1 -0.000 (-101%); above 0.0005: 29 -> 12; bubble n=17 (CHI, IND, MIA, DAL, GSW, LAL, PHX, SAC, MIA, ORL, DAL, GSW, SAC, CHA, MIA, GSW, POR) 0.008 -> 0.013 (+58%)
+PROJ[betmgm]: bottom-8 by win total (SAC, BKN, MIL, NOP, CHI, MEM, LAC, DAL) mean incentive 3-2-1 0.018 vs old 0.161 (-89%); 38-46 win teams owning their pick n=6 3-2-1 0.326 vs old 0.284 (+15%)
+PROJ[betmgm]: top 6 by 3-2-1 incentive among teams with P(playoffs)<0.9: IND 0.36, TOR 0.35, ORL 0.34, POR 0.31, DET 0.30, CHA 0.30
+PROJ[kalshi]: bottom-8 by win total (SAC, BKN, MIL, NOP, CHI, WAS, LAC, MEM) mean incentive 3-2-1 0.009 vs old 0.179 (-95%); 38-46 win teams owning their pick n=7 3-2-1 0.299 vs old 0.300 (-0%)
+PROJ[kalshi]: top 6 by 3-2-1 incentive among teams with P(playoffs)<0.9: IND 0.36, TOR 0.34, ORL 0.33, POR 0.31, GSW 0.31, CHA 0.27
+PROJ[betmgm_ownall]: bottom-8 by win total (SAC, BKN, MIL, NOP, CHI, MEM, LAC, DAL) mean incentive 3-2-1 0.031 vs old 0.280 (-89%); 38-46 win teams owning their pick n=8 3-2-1 0.333 vs old 0.299 (+11%)
+PROJ[betmgm_ownall]: top 6 by 3-2-1 incentive among teams with P(playoffs)<0.9: ATL 0.36, ORL 0.35, TOR 0.35, IND 0.34, MIA 0.33, GSW 0.32

@@ -1,0 +1,419 @@
+{
+  "candidate_source_edits": {
+    "abstract.md": "Coordinator panel-informed editorial revision and real public repository URL; no numerical model change.",
+    "requirements-release.txt": "Comment-only: replace private-manifest attribution with tested Python-version description. No dependency or scientific changes."
+  },
+  "excluded": [
+    "repository history",
+    "raw mirrors/player/PBP data",
+    "provider pilot captures",
+    "credentials/environment files",
+    "private baselines",
+    "private notes/panel reviews/reports",
+    "internal instructions",
+    "experimental collectors requiring private clients"
+  ],
+  "files": {
+    ".gitignore": {
+      "bytes": 91,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "release-owner safety exclusions",
+      "sha256": "df76ad07be598ae64f5e1af8d5460a520b8bb2aec4031bb3270eb29274b099d1"
+    },
+    "DATA_NOTICE.md": {
+      "bytes": 1642,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path DATA_NOTICE.md",
+      "sha256": "1e5c80c42a22fe2b4f8751ba4182f9a588c73c0778214e01620b758a7155cca8",
+      "source_sha256": "1e5c80c42a22fe2b4f8751ba4182f9a588c73c0778214e01620b758a7155cca8",
+      "unchanged_from_source": true
+    },
+    "DATA_SOURCES.md": {
+      "bytes": 9619,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "new release documentation/check tooling",
+      "sha256": "2c59120cbb0d91bcfdbef0f40faa766e680b807412026c290d63096ba43c6107"
+    },
+    "LICENSE": {
+      "bytes": 1077,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path LICENSE",
+      "sha256": "bb08cd42cdf0b872e559b37487c0cccd547c630e33fd1f9cb5efaa0d7e7868b5",
+      "source_sha256": "bb08cd42cdf0b872e559b37487c0cccd547c630e33fd1f9cb5efaa0d7e7868b5",
+      "unchanged_from_source": true
+    },
+    "README.md": {
+      "bytes": 6810,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "new release documentation/check tooling",
+      "sha256": "f89c0e05635d535ab7412aa8bb95004ff627560915400554a1193631b7975274"
+    },
+    "VALIDATION.md": {
+      "bytes": 3179,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "new release documentation/check tooling",
+      "sha256": "8686a20c771cbb4eafd00074b5449fed9e835e8ec58b60f3f7134b747caa5186"
+    },
+    "abstract.md": {
+      "bytes": 3263,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "final coordinator-reviewed canonical abstract; numerical results unchanged",
+      "sha256": "01b65aaed6e47b6c4326082a44c3638979cfe13089c5b69e8d3203a9e660c135",
+      "source_sha256": "01b65aaed6e47b6c4326082a44c3638979cfe13089c5b69e8d3203a9e660c135",
+      "unchanged_from_source": true
+    },
+    "build_games.py": {
+      "bytes": 2956,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path build_games.py",
+      "sha256": "899a730f1ec5a2b380ed0317cd8a44481483cabc6e7189372472faa2ea70cfb5",
+      "source_sha256": "899a730f1ec5a2b380ed0317cd8a44481483cabc6e7189372472faa2ea70cfb5",
+      "unchanged_from_source": true
+    },
+    "data/games_2023_24.csv": {
+      "bytes": 46490,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path data/games_2023_24.csv",
+      "sha256": "9995288169c51f55f487fb792fbd5dc9627d9df1467aa74af817bd4c93051cc8",
+      "source_sha256": "9995288169c51f55f487fb792fbd5dc9627d9df1467aa74af817bd4c93051cc8",
+      "unchanged_from_source": true
+    },
+    "data/games_2024_25.csv": {
+      "bytes": 46467,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path data/games_2024_25.csv",
+      "sha256": "6aee66d27ad81873b21e5b96660a099ecd3e1068bf8f4d6519938a19f489f43e",
+      "source_sha256": "6aee66d27ad81873b21e5b96660a099ecd3e1068bf8f4d6519938a19f489f43e",
+      "unchanged_from_source": true
+    },
+    "data/games_2025_26.csv": {
+      "bytes": 46531,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path data/games_2025_26.csv",
+      "sha256": "ba625fc901ed539d536f0e755d6535f3d67c7a3985faa6c8a6d412ee4a5c08f1",
+      "source_sha256": "ba625fc901ed539d536f0e755d6535f3d67c7a3985faa6c8a6d412ee4a5c08f1",
+      "unchanged_from_source": true
+    },
+    "data/market_win_totals_2026_27.csv": {
+      "bytes": 1125,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "exact numeric export of project_2026_27.WIN_TOTALS; dates from its recorded attribution",
+      "sha256": "dc9d9e47b2d0c0eb2fdc7c7e4a2bba17fdb406f8929865e2ff3e6fd6bba42290"
+    },
+    "figure1.py": {
+      "bytes": 4958,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path figure1.py",
+      "sha256": "976077c1a9adcf9ed28505f28e2c44bf54dc2a4289dd5e6b400bcb150e880f0e",
+      "source_sha256": "976077c1a9adcf9ed28505f28e2c44bf54dc2a4289dd5e6b400bcb150e880f0e",
+      "unchanged_from_source": true
+    },
+    "headline.py": {
+      "bytes": 5149,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path headline.py",
+      "sha256": "aabc1e53db5332d9d0a81c080e1f660109f5e172355e7df8a3c34e0826627466",
+      "source_sha256": "aabc1e53db5332d9d0a81c080e1f660109f5e172355e7df8a3c34e0826627466",
+      "unchanged_from_source": true
+    },
+    "lottery.py": {
+      "bytes": 5393,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path lottery.py",
+      "sha256": "e8503d2487d11dafb9febe676af65cd3b229145b276262cba84fda521485dfa8",
+      "source_sha256": "e8503d2487d11dafb9febe676af65cd3b229145b276262cba84fda521485dfa8",
+      "unchanged_from_source": true
+    },
+    "mc_uncertainty.py": {
+      "bytes": 1619,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "new release documentation/check tooling",
+      "sha256": "83f8839bda1a423eb627c0a2c330cbde3e20a9b882b76f965a8beaaa63bf94bb"
+    },
+    "ownership.py": {
+      "bytes": 4113,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path ownership.py",
+      "sha256": "b5791beb15b28e7fa5f7f90546c7b9ddd56d424640d8f2c5dd1a9441337f05a8",
+      "source_sha256": "b5791beb15b28e7fa5f7f90546c7b9ddd56d424640d8f2c5dd1a9441337f05a8",
+      "unchanged_from_source": true
+    },
+    "project_2026_27.py": {
+      "bytes": 6494,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path project_2026_27.py",
+      "sha256": "4895a8f18b0860b40ae5bf351a260fbd53b20796df53c1a589e05bddc7b52338",
+      "source_sha256": "4895a8f18b0860b40ae5bf351a260fbd53b20796df53c1a589e05bddc7b52338",
+      "unchanged_from_source": true
+    },
+    "replay.py": {
+      "bytes": 3543,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path replay.py",
+      "sha256": "e782dc43aa25731c8024817264ffc198616d74f3b57c49270908d230fad2daa8",
+      "source_sha256": "e782dc43aa25731c8024817264ffc198616d74f3b57c49270908d230fad2daa8",
+      "unchanged_from_source": true
+    },
+    "reporting.py": {
+      "bytes": 444,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path reporting.py",
+      "sha256": "82e73bf0129b5d364754d8b49fda26fa113e4049d8c8ec8c588c757352137cc8",
+      "source_sha256": "82e73bf0129b5d364754d8b49fda26fa113e4049d8c8ec8c588c757352137cc8",
+      "unchanged_from_source": true
+    },
+    "requirements-release.lock": {
+      "bytes": 1794,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path requirements-release.lock",
+      "sha256": "9d734bed40692825530c2b092c38c6f1a0be70b8d19023959c14c0b7fd7f59ac",
+      "source_sha256": "9d734bed40692825530c2b092c38c6f1a0be70b8d19023959c14c0b7fd7f59ac",
+      "unchanged_from_source": true
+    },
+    "requirements-release.txt": {
+      "bytes": 215,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path requirements-release.txt",
+      "sha256": "f77b7fad6cd4dbb2652161ad8ae3a12cf21a42be7299fda1f81435ede0dc787e",
+      "source_sha256": "2cc2af74d36eba4be58f9906d32986f0a777b5912d2084568a5cbdb2c894717a",
+      "unchanged_from_source": false
+    },
+    "requirements.txt": {
+      "bytes": 70,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path requirements.txt",
+      "sha256": "0ce341ee4b4cdaa33f214d5c67b4736f215380fa0d0246dd2fcc3924fb67e927",
+      "source_sha256": "0ce341ee4b4cdaa33f214d5c67b4736f215380fa0d0246dd2fcc3924fb67e927",
+      "unchanged_from_source": true
+    },
+    "results/conditional_rank_mcse.csv": {
+      "bytes": 622,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "computed from deposited synthetic prospective states by mc_uncertainty.py",
+      "sha256": "863c4f5040e76e57b20f7c39f3ea4d3a5fd2ff0b0b005eabc5f3b726859f3a97"
+    },
+    "results/conditional_state_mcse.csv": {
+      "bytes": 2824,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "computed from deposited synthetic prospective states by mc_uncertainty.py",
+      "sha256": "9ac0f306334e5fc5e523d6a98d1c31480eb71fe15f45a5b653151b196462b102"
+    },
+    "results/figure1.png": {
+      "bytes": 260306,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/figure1.png",
+      "sha256": "27d92b3c6156124aec2904e64ab6bb4cf0d3429ce85be89f1fc7ba3dc2f73c9b",
+      "source_sha256": "27d92b3c6156124aec2904e64ab6bb4cf0d3429ce85be89f1fc7ba3dc2f73c9b",
+      "unchanged_from_source": true
+    },
+    "results/figure1.svg": {
+      "bytes": 175594,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/figure1.svg",
+      "sha256": "abe8aa562aaed880c742fe4b9f4a1ec8786ac8c2c7293f5904d3ee505d519117",
+      "source_sha256": "abe8aa562aaed880c742fe4b9f4a1ec8786ac8c2c7293f5904d3ee505d519117",
+      "unchanged_from_source": true
+    },
+    "results/headline_numbers.txt": {
+      "bytes": 3930,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/headline_numbers.txt",
+      "sha256": "1d624378a999f37445898c9a288ef9fb4cd5c7ee2cad37724201332e7b378e74",
+      "source_sha256": "1d624378a999f37445898c9a288ef9fb4cd5c7ee2cad37724201332e7b378e74",
+      "unchanged_from_source": true
+    },
+    "results/pick_values.csv": {
+      "bytes": 9902,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/pick_values.csv",
+      "sha256": "f3fe0e5fd566d9be77c1b8e25df25775f9de88638e56d3f2da567e5ab390edea",
+      "source_sha256": "f3fe0e5fd566d9be77c1b8e25df25775f9de88638e56d3f2da567e5ab390edea",
+      "unchanged_from_source": true
+    },
+    "results/proj_2026_27_betmgm.csv": {
+      "bytes": 4987,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/proj_2026_27_betmgm.csv",
+      "sha256": "418f94b6e1c63c77dcc0cd9ab05eb27ac6912a703d3e3ad8e69c4aeb3eb45e04",
+      "source_sha256": "418f94b6e1c63c77dcc0cd9ab05eb27ac6912a703d3e3ad8e69c4aeb3eb45e04",
+      "unchanged_from_source": true
+    },
+    "results/proj_2026_27_betmgm_ownall.csv": {
+      "bytes": 4297,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/proj_2026_27_betmgm_ownall.csv",
+      "sha256": "fbfca40389c0c72d72d33ba8467332ee708e07cd68d8d52b92d38a4e238d9e3e",
+      "source_sha256": "fbfca40389c0c72d72d33ba8467332ee708e07cd68d8d52b92d38a4e238d9e3e",
+      "unchanged_from_source": true
+    },
+    "results/proj_2026_27_betmgm_states.csv": {
+      "bytes": 545389,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/proj_2026_27_betmgm_states.csv",
+      "sha256": "c3889e3873d1b9c5986a0d078f2ecc009ac501de061a73232b269b8cad742d9d",
+      "source_sha256": "c3889e3873d1b9c5986a0d078f2ecc009ac501de061a73232b269b8cad742d9d",
+      "unchanged_from_source": true
+    },
+    "results/proj_2026_27_kalshi.csv": {
+      "bytes": 5147,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/proj_2026_27_kalshi.csv",
+      "sha256": "b4bb45c8c81316f6455d8539958f5d353cc77876c61b749be28561cb02d7d543",
+      "source_sha256": "b4bb45c8c81316f6455d8539958f5d353cc77876c61b749be28561cb02d7d543",
+      "unchanged_from_source": true
+    },
+    "results/proj_2026_27_kalshi_states.csv": {
+      "bytes": 548363,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/proj_2026_27_kalshi_states.csv",
+      "sha256": "66e089022b747a489d482b7b4b613f452427683ec099c21818785e9dde414c07",
+      "source_sha256": "66e089022b747a489d482b7b4b613f452427683ec099c21818785e9dde414c07",
+      "unchanged_from_source": true
+    },
+    "results/replay_star.csv": {
+      "bytes": 19171,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/replay_star.csv",
+      "sha256": "ba99769b3f6499614f6e71526e205c0bedcc4ac19ea36e51cb50059f3aeb8672",
+      "source_sha256": "ba99769b3f6499614f6e71526e205c0bedcc4ac19ea36e51cb50059f3aeb8672",
+      "unchanged_from_source": true
+    },
+    "results/replay_ws4.csv": {
+      "bytes": 19038,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/replay_ws4.csv",
+      "sha256": "c014ddac54128ab6b0efa1278a0e422170623e017a8ab6d06edee2c927b589d3",
+      "source_sha256": "c014ddac54128ab6b0efa1278a0e422170623e017a8ab6d06edee2c927b589d3",
+      "unchanged_from_source": true
+    },
+    "results/replay_ws_car.csv": {
+      "bytes": 19009,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/replay_ws_car.csv",
+      "sha256": "cb3353c26fae54148b3bf342a3c97bbce093afd7d55d65a8f8e1d685b6dd7531",
+      "source_sha256": "cb3353c26fae54148b3bf342a3c97bbce093afd7d55d65a8f8e1d685b6dd7531",
+      "unchanged_from_source": true
+    },
+    "results/table1.csv": {
+      "bytes": 937,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/table1.csv",
+      "sha256": "d916d2be239d7069308f88e0aafcc4bb8c676f9af612dcd3e5b204ef6f2e867d",
+      "source_sha256": "d916d2be239d7069308f88e0aafcc4bb8c676f9af612dcd3e5b204ef6f2e867d",
+      "unchanged_from_source": true
+    },
+    "results/table1.md": {
+      "bytes": 321,
+      "permission_scope": "author-authorized selected derived research data; source-specific terms remain",
+      "provenance": "authoritative source snapshot, relative path results/table1.md",
+      "sha256": "e9ac8368d535f1923c74fc3476d8e6af8ce444462a055cd2fe3f0a80db3da41d",
+      "source_sha256": "e9ac8368d535f1923c74fc3476d8e6af8ce444462a055cd2fe3f0a80db3da41d",
+      "unchanged_from_source": true
+    },
+    "run_checks.py": {
+      "bytes": 2682,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "new release documentation/check tooling",
+      "sha256": "bf4b6d0565f1a2d8fef1ce2d900f82bb4a2a6866240047823399df195ebbbc46"
+    },
+    "sim.py": {
+      "bytes": 16465,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path sim.py",
+      "sha256": "b99e791cc6126de129b81ce2df7502dfddf5d96a8a731ce37198fec1da15bf6f",
+      "source_sha256": "b99e791cc6126de129b81ce2df7502dfddf5d96a8a731ce37198fec1da15bf6f",
+      "unchanged_from_source": true
+    },
+    "table1.py": {
+      "bytes": 1184,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path table1.py",
+      "sha256": "c7244b1235524eba90dc1477a09fc1751347bb43fb92e02098636ea40f5f343e",
+      "source_sha256": "c7244b1235524eba90dc1477a09fc1751347bb43fb92e02098636ea40f5f343e",
+      "unchanged_from_source": true
+    },
+    "tests/deposited/test_inputs.py": {
+      "bytes": 7976,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "new release documentation/check tooling",
+      "sha256": "ac0ee94027ce1be517ec2590533d9a6e795240141bdd24489dac0f26b02335b5"
+    },
+    "tests/release/test_synthetic_science.py": {
+      "bytes": 5817,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path tests/release/test_synthetic_science.py",
+      "sha256": "5f9b73a2b8c2c48873e74dd124c7f95b7d31009b934c0a377bb8d14e6d572183",
+      "source_sha256": "5f9b73a2b8c2c48873e74dd124c7f95b7d31009b934c0a377bb8d14e6d572183",
+      "unchanged_from_source": true
+    },
+    "value.py": {
+      "bytes": 4054,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "authoritative source snapshot, relative path value.py",
+      "sha256": "404dcc46c74abacafd7e486def616c8cf66390acb6e490fd6fbf1cf5e7cf834c",
+      "source_sha256": "404dcc46c74abacafd7e486def616c8cf66390acb6e490fd6fbf1cf5e7cf834c",
+      "unchanged_from_source": true
+    }
+  },
+  "hash_contract": "This manifest hashes all payload files; SHA256SUMS additionally hashes this manifest and excludes only itself.",
+  "repository": "https://github.com/axel5o5/tank321",
+  "repository_existence_verified": true,
+  "reproduction_scope": "deposited selected derived inputs; not upstream raw-data reconstruction",
+  "settings": {
+    "forward": {
+      "K": 150,
+      "N": 4000,
+      "all_own_K": 100,
+      "break_fraction": 0.6666666666666666,
+      "curve": "ws4",
+      "home_advantage": 0.222,
+      "seed": 7,
+      "sigma": 0.25,
+      "sources": [
+        "betmgm",
+        "kalshi"
+      ]
+    },
+    "lottery": {
+      "assumed_floor": 12,
+      "conditional_draws": 250000,
+      "initial_draws": 1000000,
+      "pool_size": 200000,
+      "seed": 11
+    },
+    "market_recorded_dates": {
+      "betmgm": "2026-09-23",
+      "kalshi_via_SBR": "2026-07-29"
+    },
+    "replay": {
+      "C": 1.0,
+      "N": 40000,
+      "curves": [
+        "ws4",
+        "ws_car",
+        "star"
+      ],
+      "seed": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ]
+    }
+  },
+  "source": "authoritative working source snapshot, October 1 2026; no repository history copied",
+  "status": "author-approved release; content and isolated checks verified",
+  "validation": {
+    "abstract_conservative_text_words": 442,
+    "abstract_raw_whitespace_tokens": 498,
+    "coordinator_isolated_recheck": true,
+    "details": "VALIDATION.md",
+    "fresh_market_quote_audit": false,
+    "full_simulations_rerun": false,
+    "installed_runtime_versions_match_lock": 17,
+    "publication_scope": "original code plus explicitly authorized selected derived inputs and outputs",
+    "raw_reconstruction": false,
+    "tests_passed": 13,
+    "wheel_hash_install_repeated": false
+  }
+}

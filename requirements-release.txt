@@ -1,0 +1,7 @@
+# Direct package pins tested with Python 3.13.7.
+# This is NOT a full transitive lock; use requirements-release.lock for the snapshot.
+numpy==2.4.2
+pandas==3.0.1
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.8
