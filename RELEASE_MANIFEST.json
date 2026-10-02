@@ -14,6 +14,12 @@
     "experimental collectors requiring private clients"
   ],
   "files": {
+    ".gitattributes": {
+      "bytes": 76,
+      "permission_scope": "original code/documentation: MIT",
+      "provenance": "binary and generated-artifact classification",
+      "sha256": "bc0a90feccd80b72dfaac141702e2b06bbb4ef3ce8f5f9d5d08ce8123262e45f"
+    },
     ".gitignore": {
       "bytes": 91,
       "permission_scope": "original code/documentation: MIT",
@@ -43,10 +49,10 @@
       "unchanged_from_source": true
     },
     "README.md": {
-      "bytes": 6810,
+      "bytes": 6988,
       "permission_scope": "original code/documentation: MIT",
       "provenance": "new release documentation/check tooling",
-      "sha256": "f89c0e05635d535ab7412aa8bb95004ff627560915400554a1193631b7975274"
+      "sha256": "154927988bf775742222324253c5a49189dd18b0872bcb3688a9c7e730f84a82"
     },
     "VALIDATION.md": {
       "bytes": 3179,
@@ -323,6 +329,12 @@
       "sha256": "b99e791cc6126de129b81ce2df7502dfddf5d96a8a731ce37198fec1da15bf6f",
       "source_sha256": "b99e791cc6126de129b81ce2df7502dfddf5d96a8a731ce37198fec1da15bf6f",
       "unchanged_from_source": true
+    },
+    "submission/ssac27-abstract.pdf": {
+      "bytes": 286094,
+      "permission_scope": "author-authorized manuscript and generated figure; source-specific data notices remain",
+      "provenance": "rendered from released abstract.md and figure1.png; no added scientific claims",
+      "sha256": "68a4d7e6552fc56ac8da164d59d6f74ae92fdf7ef800d0ee13dd8d6a34814628"
     },
     "table1.py": {
       "bytes": 1184,

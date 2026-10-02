@@ -2,7 +2,7 @@
 
 Research code and selected derived inputs for **Where the NBA's 3-2-1 Lottery Moves the Incentive to Lose**. The model compares expected retained first-round draft value from losing versus winning one remaining regular-season game under the old and 3-2-1 lottery rules.
 
-The deposited results support the accompanying [abstract](abstract.md), [Table 1](results/table1.md), and [Figure 1](results/figure1.png). Repository: [github.com/axel5o5/tank321](https://github.com/axel5o5/tank321).
+The deposited results support the accompanying [abstract](abstract.md), [two-page PDF](submission/ssac27-abstract.pdf), [Table 1](results/table1.md), and [Figure 1](results/figure1.png). The PDF is a convenience rendering; acceptance of file format and page layout must be checked against the actual submission form. Repository: [github.com/axel5o5/tank321](https://github.com/axel5o5/tank321).
 
 ## What the results mean
 

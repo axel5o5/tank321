@@ -1,0 +1,3 @@
+*.pdf binary
+*.png binary
+results/*.svg linguist-generated=true -whitespace
