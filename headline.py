@@ -1,8 +1,9 @@
-"""Headline numbers for the abstract, computed from results/ CSVs -> results/headline_numbers.txt"""
+"""Headline numbers from --input-dir CSVs, written to --output-dir (default outputs/)."""
 import numpy as np
 import pandas as pd
 from scipy import stats
 import argparse
+from pathlib import Path
 
 from lottery import NEW_GROUPS, new_lottery, old_lottery, summarize
 from value import value_vector
@@ -11,7 +12,11 @@ from reporting import bottom_by_total
 out = []
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--value-cache", help="Explicit archived pick-value CSV; otherwise rebuild from raw data")
+parser.add_argument("--input-dir", type=Path, default=Path("results"))
+parser.add_argument("--output-dir", type=Path, default=Path("outputs"))
 args = parser.parse_args()
+V = value_vector("ws4", cache_path=args.value_cache)
+args.output_dir.mkdir(parents=True, exist_ok=True)
 
 
 def say(s):
@@ -29,12 +34,11 @@ rel = new["rel"]["dist"]
 say(f"LOTTERY relegated P(pick 10/11/12) = {100*rel[9]:.1f}/{100*rel[10]:.1f}/{100*rel[11]:.1f}; "
     f"P(13+) = {100*rel[12:].sum():.2f}")
 say(f"LOTTERY old system expected pick: worst {old[:, 0].mean():.2f}, 4th worst {old[:, 3].mean():.2f}")
-V = value_vector("ws4", cache_path=args.value_cache)
 say(f"VALUE ws4: V(1)={V[0]:.1f}, V(5)={V[4]:.1f}, V(10)={V[9]:.1f}, V(14)={V[13]:.1f}, V(30)={V[29]:.1f}")
 
 # 2. Validation: three seasons played under the old lottery
 for w in ["ws4", "ws_car", "star"]:
-    d = pd.read_csv(f"results/replay_{w}.csv", index_col=0)
+    d = pd.read_csv(args.input_dir / f"replay_{w}.csv", index_col=0)
     nc = d[d.P_playoff < 0.10].copy()
     rho, p = stats.spearmanr(nc.dV_old, nc.post_shortfall)
     nc["rk"] = nc.groupby("season").dV_old.rank(pct=True)
@@ -56,7 +60,7 @@ for w in ["ws4", "ws_car", "star"]:
 
 # 3. Replay under 3-2-1
 for w in ["ws4", "ws_car", "star"]:
-    d = pd.read_csv(f"results/replay_{w}.csv", index_col=0)
+    d = pd.read_csv(args.input_dir / f"replay_{w}.csv", index_col=0)
     own = d[(d.owns_pick != "owed") & ~((d.dV_old.abs() < 1e-3) & (d.dV_new.abs() < 1e-3))]
     for scope, dd in [("2025-26", own[own.season == "2025-26"]), ("3 seasons", own)]:
         nc = dd[dd.P_playoff < 0.10]
@@ -74,7 +78,7 @@ for w in ["ws4", "ws_car", "star"]:
 
 # 4. 2026-27 projection
 for f in ["betmgm", "kalshi", "betmgm_ownall"]:
-    pj = pd.read_csv(f"results/proj_2026_27_{f}.csv", index_col=0)
+    pj = pd.read_csv(args.input_dir / f"proj_2026_27_{f}.csv", index_col=0)
     bottom = bottom_by_total(pj)
     band = pj[(pj.win_total >= 38) & (pj.win_total <= 46)]
     band_own = band[band.owns_2027_pick != "no"]
@@ -86,4 +90,4 @@ for f in ["betmgm", "kalshi", "betmgm_ownall"]:
     say(f"PROJ[{f}]: top 6 by 3-2-1 incentive among teams with P(playoffs)<0.9: " +
         ", ".join(f"{t} {v:.2f}" for t, v in lot.dV_new.head(6).items()))
 
-open("results/headline_numbers.txt", "w").write("\n".join(out) + "\n")
+(args.output_dir / "headline_numbers.txt").write_text("\n".join(out) + "\n")

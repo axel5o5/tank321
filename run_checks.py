@@ -5,7 +5,6 @@ import importlib.metadata
 import json
 import os
 from pathlib import Path
-import runpy
 import sys
 import tempfile
 import unittest
@@ -15,8 +14,10 @@ ROOT = Path(__file__).resolve().parent
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--artifacts', action='store_true', help='Also regenerate headline, table and figure')
+    parser.add_argument('--artifacts', action='store_true', help='Also regenerate headline, table, figure and MC error into outputs/')
+    parser.add_argument('--output-dir', type=Path, default=ROOT / 'outputs', help='Artifact destination (not published results/)')
     args = parser.parse_args()
+    args.output_dir = args.output_dir.resolve()
     if not sys.flags.isolated or not sys.dont_write_bytecode:
         parser.error('Use python -I -B run_checks.py')
     sys.path.insert(0, str(ROOT))
@@ -41,10 +42,8 @@ def main():
         if not result.wasSuccessful():
             return 1
         if args.artifacts:
-            for script, argv in [('headline.py', ['--value-cache', 'results/pick_values.csv']),
-                                 ('table1.py', []), ('figure1.py', [])]:
-                sys.argv = [script] + argv
-                runpy.run_path(str(ROOT / script), run_name='__main__')
+            from reproduce import main as reproduce
+            reproduce(['--output-dir', str(args.output_dir)])
         print(json.dumps({'scope': 'deposited-input checks and bounded replay smoke',
                           'isolated': True, 'network': 'disabled', 'tests': result.testsRun,
                           'module_origins': origins,

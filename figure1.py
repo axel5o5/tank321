@@ -4,6 +4,14 @@ import matplotlib
 import numpy as np
 import pandas as pd
 from scipy import stats
+import argparse
+from pathlib import Path
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--input-dir", type=Path, default=Path("results"))
+parser.add_argument("--output-dir", type=Path, default=Path("outputs"))
+args = parser.parse_args()
+args.output_dir.mkdir(parents=True, exist_ok=True)
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -11,7 +19,7 @@ import matplotlib.pyplot as plt
 SURF, INK, INK2, GRID, BAND = "#fcfcfb", "#0b0b0b", "#52514e", "#e4e3df", "#f1f0ec"
 OLD, NEW = "#77736e", "#2a78d6"
 
-d = pd.read_csv("results/replay_ws4.csv", index_col=0)
+d = pd.read_csv(args.input_dir / "replay_ws4.csv", index_col=0)
 fig, (ax, bx) = plt.subplots(1, 2, figsize=(11.5, 6.4), dpi=200, gridspec_kw={"width_ratios": [1.05, 1]})
 fig.patch.set_facecolor(SURF)
 
@@ -86,6 +94,7 @@ fig.text(0.015, 0.935, "Incentive = expected retained first-round draft value ga
          "instead of winning it, accounting for specified pick obligations.",
          fontsize=8, color=INK2)
 fig.tight_layout(rect=[0, 0, 0.985, 0.92], w_pad=3)
-fig.savefig("results/figure1.png", facecolor=SURF)
-fig.savefig("results/figure1.svg", facecolor=SURF)
+fig.savefig(args.output_dir / "figure1.png", facecolor=SURF)
+fig.savefig(args.output_dir / "figure1.svg", facecolor=SURF)
+plt.close(fig)
 print("saved")

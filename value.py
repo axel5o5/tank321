@@ -9,6 +9,7 @@ Three definitions:
 Unplayed seasons count as 0. Each curve is made monotone non-increasing with isotonic regression.
 """
 from __future__ import annotations
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -27,6 +28,16 @@ def player_seasons() -> pd.DataFrame:
 
 
 def pick_values(window: str = "ws4") -> pd.DataFrame:
+    required = ["Draft Pick History.csv", "Advanced.csv"]
+    if window == "star":
+        required.append("End of Season Teams.csv")
+    missing = [str(Path(RAW) / name) for name in required if not (Path(RAW) / name).is_file()]
+    if missing:
+        raise FileNotFoundError(
+            "Raw source data is not deposited: " + ", ".join(missing) +
+            ". Use python reproduce.py for deposited-input artifacts, or pass "
+            "--value-cache results/pick_values.csv to replay.py/project_2026_27.py/headline.py. "
+            "This reuses the deposited curve; it does not reconstruct raw sources.")
     d = pd.read_csv(f"{RAW}/Draft Pick History.csv")
     d = d[(d.lg == "NBA") & d.overall_pick.notna()].copy()
     d["overall_pick"] = d.overall_pick.astype(int)

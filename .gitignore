@@ -1,9 +1,13 @@
 __pycache__/
 *.pyc
 .venv/
+venv/
 .pytest_cache/
 .env
 .env.*
 data/raw/
 research/private/
 .DS_Store
+/outputs/
+.mypy_cache/
+.ruff_cache/
